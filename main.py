@@ -47,3 +47,7 @@ while(len(save)!=0):
             del save[i]
 
 print (result)
+for i, pnt in enumerate(result):
+    print(f"Local Maxima {i}:")
+    print(f"\t(x,y)=({round(pnt[0],3)},{round(pnt[1],3)})")
+    print(f"\tat f(x,y)={round(f(pnt[0],pnt[1]),4)}")

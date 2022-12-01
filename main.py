@@ -19,7 +19,6 @@ alpha=0.01
 for i in range(iterations):
     point= [uniform(domain[0][0],domain[0][1]),uniform(domain[1][0],domain[1][1])]
     gradient=(dfdx(point[0],point[1]),dfdy(point[0],point[1]))
-    difference= 10
     for j in range(1000):
         newPoint = [point[0]+gradient[0]*alpha,point[1]+gradient[1]*alpha]
         gradient=(dfdx(point[0],point[1]),dfdy(point[0],point[1]))
@@ -48,6 +47,6 @@ while(len(save)!=0):
 
 print (result)
 for i, pnt in enumerate(result):
-    print(f"Local Maxima {i}:")
+    print(f"Local Maxima {i+1}:")
     print(f"\t(x,y)=({round(pnt[0],3)},{round(pnt[1],3)})")
     print(f"\tat f(x,y)={round(f(pnt[0],pnt[1]),4)}")
